@@ -1,3 +1,4 @@
+##Parent class
 class Dog():
 
     type = "mammals" #class attribute
@@ -11,13 +12,15 @@ class Dog():
     def speak(self, sound):
         return("{} speaks {}".format(self.name, sound))
 
+##child class inherits from parent class
 class Husky(Dog):
     def run(self, speed):
         return("{} runs at {} speed".format(self.name, speed))
 
+##child class inherits from parent class
 class Labrador(Dog):
     def run(self, speed):
-        return("{} runs at {} speed".format(self.name, speed))
+        return("{} runs at {}".format(self.name, speed))
 
 jim = Husky("jim", 12)
 print(jim.description())
