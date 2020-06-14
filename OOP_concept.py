@@ -9,10 +9,15 @@ class Dog():
         ##Dog.name = name
         ##Dog.age = age
 
-dog1 = Dog("Leo", 3)   ##creating instances of the class
-dog2 = Dog("Tiger", 4)
+    ##instance methods.
+    ##They have a mandatory single argument: self
+    def description(self):
+        return("{} is {} years old".format(self.name, self.age))
+    def speak(self, sound):
+        return("{} speaks {}".format(self.name, sound))
 
-if dog1.type == "mammals":
-    print(dog1.name, dog1.age)
-else:
-    print("not a choise")
+
+dog1 = Dog("Leo", 3)   ##creating instances of the class
+print(dog1.description())
+print(dog1.speak("gruff gruff"))
+
